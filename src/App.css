@@ -1,22 +1,174 @@
-.App {
-  text-align: center;
+
+/* Resize Testing for modal */
+
+/* .App{
+  width:80%;
+  height:900px;
+  margin: 0 auto;
+} */
+
+/* Masthead Section */
+
+.masthead-section{
+  width:100%;
+  margin: 0 auto;
+  height:auto;
+  margin-top: -45px;
+  padding-bottom:2%;
 }
 
-.App-logo {
-  height: 40vmin;
+.masthead-section_row{
+  overflow:hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.masthead-section_row--headline{
+  position:relative;
+  top:350px;
+  color:#FFFFFF;
+  font: 40px Graphix, Helevetica, Arial, sans-serffif;
+  margin-left: 25%;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.App-link {
-  color: #09d3ac;
+
+.masthead-section_row--backgroundmedia{
+  width:100%;
+  height:600px;
+  background-size:100% 100%;
+  background-image: linear-gradient(80deg, rgb(59, 51, 153) 40%, rgba(59, 51, 153, 0) 100%), url("https://img4.hulu.com/user/v3/artwork/47b48273-0bac-444e-8b20-4d4a9153eeb7?base_image_bucket_name=image_manager&base_image=d2990785-bc7a-4519-97c9-e379f92fcac7&operations=%5B%7B%22resize%22:%221280x1280%7Cmax%22%7D,%7B%22format%22:%22jpeg%22%7D%5D");
 }
+
+@media (max-width:1024px){
+
+  .masthead-section_row--backgroundmedia{
+    filter: blur(5px);
+    margin: -10px -5px -10px -5px;
+    padding: 5px;
+  }
+
+  .masthead-section_row--headline{
+    z-index: 900;
+    margin-left: 25%;
+    top:220px;
+  }
+
+  .masthead-section_row--backgroundmedia{
+    height:400px;
+  }
+
+}
+
+@media (max-width:585px){
+
+  .masthead-section{
+    margin-top: -90px;
+  }
+
+  .masthead-section_row--headline{
+    margin: 0 auto;
+    text-align:center;
+  }
+  
+
+}
+
+
+/* FirstThree Section */
+
+.FirstThree-section{
+  width:100%;
+  margin: 0 auto;
+  height:auto;
+}
+
+.firstthree-section_row-title{
+  margin-left:3%;
+  font-size:20px;
+  border:1px solid rgb(247, 247, 250);
+  text-align:center;
+  width:90px;
+  padding:1%;
+  background-color:rgb(247, 248, 250);
+}
+
+.firstthree-section_row-cardRow{
+  display:inline-block;
+  width:100%;
+  margin: 0 auto;
+  text-align:center;
+}
+
+.firstthree-section_row-cardRow--episodeCard{
+  width:30%;
+  height:auto;
+  display:inline-block;
+  text-align:left;
+  margin:1%;
+}
+
+.firstthree-section_row-cardRow--episodeCard---img{
+  width: 100%;
+  margin: 0 auto;
+  height:200px;
+}
+
+.firstthree-section_row-cardRow--episodeCard---number{
+    font-weight: 500;
+    font-stretch: normal;
+    font-size: 12px;
+    line-height: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #6b7790;
+    color: grey;
+    margin-bottom: 5px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.firstthree-section_row-cardRow--episodeCard---title{
+  font-weight: 400;
+  font-stretch: normal;
+  letter-spacing: -0.5px;
+  font-size: 20px;
+  line-height: 24px;
+  display: inline-block;
+  margin: 0 0 8px;
+  transition: opacity 0.3s ease;
+  width: 90%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 24px;
+}
+
+@media (max-width:767px){
+  .firstthree-section_row-cardRow--episodeCard{
+    width:48%;
+  }
+
+  .firstthree-section_row-title{
+    margin-left:4%;
+    padding:1.5%;
+    margin-top:2%;
+    margin-bottom:2%;
+  }
+}
+
+@media (max-width:500px){
+  .firstthree-section_row-cardRow--episodeCard{
+    width:90%;
+  }
+
+  .firstthree-section_row-title{
+    margin-left:5%;
+    padding:2%;
+    margin-top:5%;
+    margin-bottom:5%;
+  }
+}
+
+

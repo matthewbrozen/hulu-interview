@@ -6,7 +6,12 @@ class Masthead extends Component{
     render(){
         return(
             <div>
-                <h1> Masthead</h1>
+                <div className="masthead-section">
+                    <div className="masthead-section_row">
+                        <div className="masthead-section_row--headline" > Marvel's Runaways </div>
+                        <div className="masthead-section_row--backgroundmedia" ></div>
+                    </div>
+                </div>
             </div>
         )
     }

@@ -1,0 +1,17 @@
+{
+    "episodes":[{
+        "episodeNumber":"1",
+        "episodeThumbnail":"https://img4.hulu.com/user/v3/artwork/86dd5c89-90bf-4b85-b0f5-c05060071992?base_image_bucket_name=image_manager&base_image=9f24cfa8-988c-4378-b416-e7fff5c5748b&operations=%5B%7B%22resize%22:%22600x600%7Cmax%22%7D,%7B%22format%22:%22jpeg%22%7D%5D",
+        "episodeTitle": "Reunion"},
+        {
+            "episodeNumber":"2",
+            "episodeThumbnail":"https://img3.hulu.com/user/v3/artwork/d98b9bbb-dc70-4b44-b2f2-3fc7a3819b66?base_image_bucket_name=image_manager&base_image=0ce3b038-444c-4685-8e57-52eb68d514da&operations=%5B%7B%22resize%22:%22600x600%7Cmax%22%7D,%7B%22format%22:%22jpeg%22%7D%5D",
+            "episodeTitle": "Rewind"
+        },
+        {
+            "episodeNumber":"3",
+            "episodeThumbnail":"https://img4.hulu.com/user/v3/artwork/b0ccc3df-7a29-4d5f-a86c-f8dc4e6716c3?base_image_bucket_name=image_manager&base_image=1f820b6a-bb22-4bdd-9a68-d18bbaa64479&operations=%5B%7B%22resize%22:%22600x600%7Cmax%22%7D,%7B%22format%22:%22jpeg%22%7D%5D",
+            "episodeTitle": "Destiny"
+        }
+    ]
+}
