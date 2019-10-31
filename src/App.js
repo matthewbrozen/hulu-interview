@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Masthead from './Masthead';
 import FirstThree from './FirstThree';
@@ -11,7 +10,6 @@ function App() {
       <Masthead />
       <FirstThree />
       <SimpleContact />
-
     </div>
   );
 }
