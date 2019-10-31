@@ -4,10 +4,10 @@ class SimpleContact extends Component{
 
     constructor(props) {
         super(props);
-        this.state = { feedback: '', name: '',email: '', submitted:'' };
+        this.state = { feedback: '', name: '',email: '', submitted:'', error:'' };
         this.handleChange = this.handleChange.bind(this);
-        this.handle2Change = this.handle2Change.bind(this);
-        this.handle3Change = this.handle3Change.bind(this);
+        this.handleChange2 = this.handleChange2.bind(this);
+        this.handleChange3 = this.handleChange3.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
       }
 
@@ -26,7 +26,7 @@ class SimpleContact extends Component{
                 <input
                     type="text"
                     name="name"
-                    onChange={this.handle2Change}
+                    onChange={this.handleChange2}
                     placeholder="Name"
                     value={this.state.name}
                     className="simple-section_form-input"
@@ -35,9 +35,9 @@ class SimpleContact extends Component{
                 <br></br>
                 <label >Email: </label>
                 <input
-                    type="text"
+                    type="email"
                     name="email"
-                    onChange={this.handle3Change}
+                    onChange={this.handleChange3}
                     placeholder="Email"
                     value={this.state.email}
                     className="simple-section_form-input"
@@ -45,7 +45,7 @@ class SimpleContact extends Component{
                 />
                 <br></br>
                 <label >Message: </label>
-                <textarea
+                <input
                     name="message"
                     onChange={this.handleChange}
                     placeholder="What can we help you with?"
@@ -54,7 +54,7 @@ class SimpleContact extends Component{
                     required
                 />
                 <br></br>
-                <input type="button" value="SUBMIT" className="simple-section_form-submit" onClick={this.handleSubmit} />
+                <input type="submit" value="SUBMIT" className="simple-section_form-submit" onClick={this.handleSubmit} />
             </form>
             )}
 
@@ -72,29 +72,32 @@ class SimpleContact extends Component{
     this.setState({feedback: event.target.value})
   }
 
-  handle2Change(event) {
+  handleChange2(event) {
     this.setState({name: event.target.value})
   }
 
-  handle3Change(event) {
+  handleChange3(event) {
     this.setState({email: event.target.value})
   }
 
   handleSubmit (event) {
-    // console.log(this.state.name);
-    // this.setState({submitted:'true'});
-    // console.log(this.state.submitted);
 
-    if(this.state.name===''||this.state.email===''||this.state.feedback===''){
-        alert('It Looks Like You Missed Something')
+    if(this.state.name===''|| this.state.email ==='' || this.state.feedback===''){
+        console.log('form fields not filled out');
+    }
+    
+    if(!this.state.email.includes('@')){
+        console.log('Please check this email')
     }else{
 	const templateId = 'template_PikjLHGo';
 
      this.sendFeedback(templateId, {message_html: this.state.feedback, from_name: this.state.name, reply_to: this.state.email})
     
      this.setState({submitted:'true'});
-
+    //  console.log('SENT')
     }
+
+    
   }
 
   sendFeedback (templateId, variables) {
