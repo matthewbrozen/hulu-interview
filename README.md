@@ -1,68 +1,42 @@
+# Matthew Brozen Hulu Code Assessment
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Installation Instructions
 
-In the project directory, you can run:
+Clone the Repp
 
-### `npm start`
+npm install
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+npm start
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+For a production build use: npm run build
 
-### `npm test`
+### Components
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This React application uses three components; the Masthead component, the FirstThree component and the SimpleContact component. 
 
-### `npm run build`
+#### Masthead Component
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This is a standard key visual component with the show title and a show background image with a color gradient. 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+##### Further Masthead Development
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This component could be enchanched by first pulling the data from JSON instead of being hard coded, adding in conditional rendering for other elements like a show poster play button etc., also conditional rendering for video background vs the background image currently used and adding in transition animation effects. 
 
-### `npm run eject`
+#### FirstThree Component
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This is a standard card display component where each card contains the shows episode image, title and number.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+##### Further FirstThree Development
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+If the amount of cards is variable then the three card layout won't look the same. This can be handled by turning the episode card to be a stateless component that takes in the array of episodes and iterates them within the card row for however many episodes there are. Also implementing a sliding functionallity so that only a certain number of cards display until you swipe or click a arrow. 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### SimpleContact Component
 
-## Learn More
+This is a standard form component that takes in the users name, email and message then emails those to Alyssa Saucedo at alyssa.saucedo@hulu.com using [EmailJS](https://www.emailjs.com/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+##### Further SimpleContact Development
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+EmailJS is a paid service that allows you to send emails from client side code. A better approach to this would be a build a API with nodemailer or comparable free backend email sending service. This would change the component by changing the EmailJS code in a API call. Another improvement would be storing the user input before being submitted within the form if the user navigates aways from the page. 
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

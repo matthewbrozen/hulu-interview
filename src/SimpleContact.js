@@ -16,20 +16,20 @@ class SimpleContact extends Component{
 	return (
 
     <div>
-        <div className="simple-section">
+        <div className="simplesection">
 
             {!this.state.submitted && (
-             <form className="simple-section_form">
-                <h1 className="simple-section_form-title">Contact Hulu</h1>
+             <form className="simplesection_form">
+                <h1 className="simplesection_form-title">Contact Hulu</h1>
 
                 <label >Name: </label>
                 <input
                     type="text"
                     name="name"
-                    onChange={this.handleChange2}
+                    onChange={this.handleChange}
                     placeholder="Name"
                     value={this.state.name}
-                    className="simple-section_form-input"
+                    className="simplesection_form-input"
                     required
                 />
                 <br></br>
@@ -37,10 +37,10 @@ class SimpleContact extends Component{
                 <input
                     type="email"
                     name="email"
-                    onChange={this.handleChange3}
+                    onChange={this.handleChange}
                     placeholder="Email"
                     value={this.state.email}
-                    className="simple-section_form-input"
+                    className="simplesection_form-input"
                     required
                 />
                 <br></br>
@@ -50,17 +50,17 @@ class SimpleContact extends Component{
                     onChange={this.handleChange}
                     placeholder="What can we help you with?"
                     value={this.state.feedback}
-                    className="simple-section_form-textarea"
+                    className="simplesection_form-textarea"
                     required
                 />
                 <br></br>
-                <input type="submit" value="SUBMIT" className="simple-section_form-submit" onClick={this.handleSubmit} />
+                <input type="submit" value="SUBMIT" className="simplesection_form-submit" onClick={this.handleSubmit} />
             </form>
             )}
 
             {this.state.submitted && (
-                <div className="simple-section_success"> 
-                    <div className="simple-section_success-message"> Thanks for your message, we will get back to you shortly!</div>
+                <div className="simplesection_success"> 
+                    <div className="simplesection_success-message"> Thanks for your message, we will get back to you shortly!</div>
                 </div>
             )}
         </div>
@@ -80,6 +80,10 @@ class SimpleContact extends Component{
     this.setState({email: event.target.value})
   }
 
+  
+
+
+
   handleSubmit (event) {
 
     if(this.state.name===''|| this.state.email ==='' || this.state.feedback===''){
@@ -94,7 +98,6 @@ class SimpleContact extends Component{
      this.sendFeedback(templateId, {message_html: this.state.feedback, from_name: this.state.name, reply_to: this.state.email})
     
      this.setState({submitted:'true'});
-    //  console.log('SENT')
     }
 
     
@@ -105,7 +108,6 @@ class SimpleContact extends Component{
   	'gmail', templateId,
   	variables
   	).then(res => {
-        console.log(variables)
     	console.log('Email successfully sent!')
   	})
   	// Handle errors here however you like, or use a React error boundary
