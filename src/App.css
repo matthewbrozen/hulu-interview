@@ -1,5 +1,17 @@
+/* Baseline */
 
-/* Resize Testing for modal */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+/* Resize Testing for possible modal use */
 
 /* .App{
   width:80%;
@@ -144,9 +156,9 @@
   position:relative;
   top:250px;
   color:#FFFFFF;
-  font: 40px Graphix, Helevetica, Arial, sans-serffif;
+  font: 40px "Graphik-Regular", "Helevetica", "Arial", "sans-serffif";
   margin-left: 25%;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-weight:100;
 }
 
 
@@ -208,6 +220,7 @@
   width:90px;
   padding:1%;
   background-color:rgb(247, 248, 250);
+  font: 20px "Graphik-Regular", "Helevetica", "Arial", "sans-serffif"
 }
 
 .firstthree-section_row-title:hover{
@@ -250,7 +263,7 @@
 .firstthree-section_row-cardRow--episodeCard---number{
     font-weight: 500;
     font-stretch: normal;
-    font-size: 12px;
+    font: 12px "Graphik-Regular", "Helevetica", "Arial", "sans-serffif";
     line-height: 13px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -267,7 +280,7 @@
   font-weight: 400;
   font-stretch: normal;
   letter-spacing: -0.5px;
-  font-size: 20px;
+  font: 20px "Graphik-Regular", "Helevetica", "Arial", "sans-serffif";
   line-height: 24px;
   display: inline-block;
   margin: 0 0 8px;
@@ -308,7 +321,7 @@
 
 /* simple-section */
 
-.simplesection{
+.simple-section{
   width: 50%;
   margin: 0 auto;
   height:450px;
@@ -320,14 +333,19 @@
   background-color:#F8F8F8;
 }
 
-.simplesection_form{
+.simple-section_form{
   display:block;
+}
+
+
+.simple-section_form-label{
+  font: 15px "hulustyle_extrabold", "Helevetica", "Arial", "sans-serffif";
 }
 
 
 
 
-.simplesection_form-input{
+.simple-section_form-input{
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -335,19 +353,10 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  font: 15px "hulustyle_bold", "Helevetica", "Arial", "sans-serffif";
 }
 
-.simplesection_form-textarea{
-  width: 100%;
-  padding: 40px 20px;
-  margin: 8px 0;
-  display: block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.simplesection_form-submit{
+.simple-section_form-submit{
   width: 100%;
   background-color: #1CE783;
   color: white;
@@ -356,17 +365,18 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size:14px;
+  font:14px "Graphik-Semibold", "Helevetica", "Arial", "sans-serffif";
   font-weight:bolder;
   letter-spacing: 1px;
+
 }
 
-.simplesection_form-submit:hover{
+.simple-section_form-submit:hover{
   background-color: black;
   color:#1CE783;
 }
 
-.simplesection_success{
+.simple-section_success{
   width:100%;
   margin:0 auto;
   text-align:center;
@@ -374,7 +384,7 @@
   margin-bottom:25%;
 }
 
-.simplesection_success-message{
+.simple-section_success-message{
   font-size:50px;
   font-weight:bolder;
 

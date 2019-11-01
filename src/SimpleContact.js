@@ -16,51 +16,51 @@ class SimpleContact extends Component{
 	return (
 
     <div>
-        <div className="simplesection">
+        <div className="simple-section">
 
             {!this.state.submitted && (
-             <form className="simplesection_form">
-                <h1 className="simplesection_form-title">Contact Hulu</h1>
+             <form className="simple-section_form">
+                <h1 className="simple-section_form-title">Contact Hulu</h1>
 
-                <label >Name: </label>
+                <label className="simple-section_form-label" >Name: </label>
                 <input
                     type="text"
                     name="name"
                     onChange={this.handleChange}
                     placeholder="Name"
                     value={this.state.name}
-                    className="simplesection_form-input"
+                    className="simple-section_form-input"
                     required
                 />
                 <br></br>
-                <label >Email: </label>
+                <label className="simple-section_form-label">Email: </label>
                 <input
                     type="email"
                     name="email"
                     onChange={this.handleChange}
                     placeholder="Email"
                     value={this.state.email}
-                    className="simplesection_form-input"
+                    className="simple-section_form-input"
                     required
                 />
                 <br></br>
-                <label >Message: </label>
+                <label className="simple-section_form-label" >Message: </label>
                 <input
                     name="message"
                     onChange={this.handleChange}
                     placeholder="What can we help you with?"
                     value={this.state.feedback}
-                    className="simplesection_form-textarea"
+                    className="simple-section_form-input"
                     required
                 />
                 <br></br>
-                <input type="submit" value="SUBMIT" className="simplesection_form-submit" onClick={this.handleSubmit} />
+                <input type="submit" value="SUBMIT" className="simple-section_form-submit" onClick={this.handleSubmit} />
             </form>
             )}
 
             {this.state.submitted && (
-                <div className="simplesection_success"> 
-                    <div className="simplesection_success-message"> Thanks for your message, we will get back to you shortly!</div>
+                <div className="simple-section_success"> 
+                    <div className="simple-section_success-message"> Thanks for your message, we will get back to you shortly!</div>
                 </div>
             )}
         </div>

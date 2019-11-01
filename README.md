@@ -43,4 +43,4 @@ EmailJS is a paid service that allows you to send emails from client side code. 
 
 ### Deloyment
 
-This assessment is deployed to [firebase](https://huluassessment.firebaseapp.com)
+This assessment is deployed to Firebase [Demo](https://huluassessment.firebaseapp.com)
