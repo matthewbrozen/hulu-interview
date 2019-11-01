@@ -34,9 +34,13 @@ If the amount of cards is variable then the three card layout won't look the sam
 
 #### SimpleContact Component
 
-This is a standard form component that takes in the users name, email and message then emails those to Alyssa Saucedo at alyssa.saucedo@hulu.com using [EmailJS](https://www.emailjs.com/)
+This is a standard form component that takes in the users name, email and message then emails those to Alyssa Saucedo at `alyssa.saucedo@hulu.com` using [EmailJS](https://www.emailjs.com/)
 
 ##### Further SimpleContact Development
 
 EmailJS is a paid service that allows you to send emails from client side code. A better approach to this would be a build a API with nodemailer or comparable free backend email sending service. This would change the component by changing the EmailJS code in a API call. Another improvement would be storing the user input before being submitted within the form if the user navigates aways from the page. 
 
+
+### Deloyment
+
+This assessment is deployed to [firebase](https://huluassessment.firebaseapp.com)
